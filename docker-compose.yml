@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: src
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+    depends_on:
+      - 'mongo'
+  mongo:
+    image: 'mongo:latest'
+    environment:
+      - MONGO_INITDB_DATABASE=guestdb
+    ports:
+      - '27100:27017'
+    volumes:
+      - mongodata:/data/db
+volumes:
+  mongodata:
