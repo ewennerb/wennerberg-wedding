@@ -47,7 +47,14 @@ var UpdateHousehold = http.HandlerFunc(func(response http.ResponseWriter, reques
 	logger.Infof("POST /household/%s", id)
 
 	var household models.Household
-	json.NewDecoder(request.Body).Decode(&household)
+
+	decoder := json.NewDecoder(request.Body)
+	decodeErr := decoder.Decode(&household)
+	if decodeErr != nil {
+		logger.Infof("Something went awry: \n %s", decodeErr)
+	} else {
+		logger.Infof("%s", household)
+	}
 
 	collection := client.Database("test").Collection("household")
 	_, err := collection.ReplaceOne(context.TODO(), bson.D{primitive.E{Key: "_id", Value: id}}, household)
@@ -74,12 +81,12 @@ var GetGuestInfo = http.HandlerFunc(func(response http.ResponseWriter, request *
 			{"$group", bson.D{
 				{"_id", nil},
 				{"invited", bson.D{{"$sum", 1}}},
-				{"attending", bson.D{{"$sum", bson.D{{"$cond", bson.A{bson.D{{"$eq", bson.A{"$guests.attending", true}}}, 1, 0}}}}}},
+				{"attending", bson.D{{"$sum", bson.D{{"$cond", bson.A{bson.D{{"$eq", bson.A{"$guests.attending", "true"}}}, 1, 0}}}}}},
 				{"steak", bson.D{{"$sum", bson.D{{"$cond", bson.A{bson.D{{"$eq", bson.A{"$guests.dinner_choice", "steak"}}}, 1, 0}}}}}},
 				{"fish", bson.D{{"$sum", bson.D{{"$cond", bson.A{bson.D{{"$eq", bson.A{"$guests.dinner_choice", "fish"}}}, 1, 0}}}}}},
 				{"lasagna", bson.D{{"$sum", bson.D{{"$cond", bson.A{bson.D{{"$eq", bson.A{"$guests.dinner_choice", "lasagna"}}}, 1, 0}}}}}},
 				{"attending_guests", bson.D{{"$push", bson.D{{"$cond", bson.A{
-					bson.D{{"$eq", bson.A{"$guests.attending", true}}},
+					bson.D{{"$eq", bson.A{"$guests.attending", "true"}}},
 					bson.D{
 						{"name", "$guests.name"},
 						{"dinner", "$guests.dinner_choice"},
