@@ -1,5 +1,18 @@
 version: '3.8'
 services:
+
+  interface:
+    build:
+      context: interface
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+#    volumes:
+#      - ./sveltekit-app:/app # For local development (optional)
+#      - interface/node_modules # Prevent conflicts with host dependencies
+    environment:
+      - NODE_ENV=production
+
   api:
     build:
       context: src
