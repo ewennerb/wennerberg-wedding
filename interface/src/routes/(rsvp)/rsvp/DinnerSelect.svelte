@@ -12,10 +12,10 @@
 </script>
 
 
-<div class="knotRow">
-    <div class="knotRow nameLabel">{guest.name}</div>
-    <div class="knotRow inputStuff">
-        <div class="buttonWrapper">
+<div class="rsvpRow">
+    <div class="rsvpRow nameLabel">{guest.name}</div>
+    <div class="rsvpRow inputFlex">
+        <div class="rsvpRow inputFlex buttonWrapper">
             <select class="guestDropdown" disabled={dinnerDisabled} bind:value={guest.dinner_choice} on:change={(e) => updateGuest('dinner_choice', e.target.value)}>
                 <option value="" disabled selected>-- None --</option>
                 <option value="steak">Filet Mignon</option>
@@ -28,87 +28,21 @@
 
 
 <style>
-    /* Todo: Rename CSS Classes and update font info! */
-    .knotRow {
-        height: 80%;
-        width: 480px;
-        padding: 5px 20px 0px;
-        text-align: left;
-        z-index: 2;
-        display: flex;
-        -webkit-box-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        align-items: center;
-        margin-bottom: 24px;
-    }
 
-    .knotRow .nameLabel {
-        color: rgba(0, 0, 0, 0.4);
-        font-weight: 400;
-        display: flex;
-        font-size: 20px;
-        margin-bottom: 0px;
-    }
-
-    .knotRow .inputStuff {
-        display: flex;
-        width: 20rem;
-        margin-bottom: 0px
-    }
-
-    .knotRow .inputStuff .buttonWrapper {
+    .buttonWrapper {
         height: 40px;
-        font-size: 16px;
+        font-size: clamp(12px, calc(0.75rem + ((1vw - 4px) * 0.3012)), 16px);
         border-radius: 5px;
         align-items: center;
-        justify-content: center;
+        justify-content: right;
         display: flex;
         opacity: 1;
     }
 
-    .acceptButton {
-        height: 40px;
-        width: 124px;
-        font-size: 16px;
-        border-radius: 2px;
-        background-color: rgb(246, 233, 213);
-        border: 2px solid rgba(0, 0, 0, 0.4);
-        color: rgba(0, 0, 0, 0.4);
-        opacity: 0.5;
-        margin-left: 8px;
-        margin-right: 12px;
-        touch-action: manipulation;
-    }
-
-    .rsvpField {
-        margin-right: 1rem;
-        background-color: rgb(255, 255, 255);
-        border-color: rgba(0, 0, 0, 0.4);
-        border-radius: 3px;
-        border-style: solid;
-        border-width: 1px;
-        color: rgba(0, 0, 0, 0.4);
-        cursor: text;
-        display: block;
-        font-weight: 400;
-        height: 90%;
-        letter-spacing: 1px;
-        line-height: 24px;
-        transition-delay: 0s;
-        transition-duration: 0.2s;
-        transition-property: border-color;
-        transition-timing-function: ease-out;
-        width: 5rem;
-        word-spacing: 0px;
-        padding-block-start: 15px;
-        padding-inline-end: 10px;
-        padding-inline-start: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 0px;
-        position: relative;
-        text-align: start;
+    @media (max-width: 400px) {
+        .buttonWrapper {
+            width: 50vw;
+        }
     }
 
     .guestDropdown {

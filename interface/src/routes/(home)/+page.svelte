@@ -41,14 +41,10 @@
     }
 
     .eventHeader {
-        margin-top: 3rem;
-        margin-left: 0rem;
-        margin-right: 0rem;
-        margin-bottom: 0.5rem;
+        margin: 3rem 0rem 0.5rem;
         letter-spacing: 3px;
         color: rgb(64, 64, 65);
-        font-size: 32px;
-        /*font-weight: normal;*/
+        font-size: clamp(20px, calc(1.25rem + ((1vw - 4px) * 0.9036)), 32px);
         text-transform: uppercase;
     }
 
@@ -60,20 +56,20 @@
         margin-top: 0.5rem;
         letter-spacing: 3px;
         color: rgb(64, 64, 65);
-        font-size: 22px;
+        font-size: clamp(14px, calc(0.875rem + ((1vw - 4px) * 0.6024)), 22px);
         font-weight: normal;
         text-transform: uppercase;
     }
 
     .eventInfoSmall {
-        margin-top: 2rem;
+        margin-top: 0.5rem;
     }
 
     .eventInfoSmall h3 {
         margin: 0.5rem;
         letter-spacing: 0px;
         color: rgb(64, 64, 65);
-        font-size: 18px;
+        font-size: clamp(12px, calc(0.75rem + ((1vw - 4px) * 0.4518)), 18px);
         font-weight: 400;
     }
 
@@ -99,9 +95,6 @@
         padding-top: 220px;
         padding-bottom: 15px;
     }
-
-
-
 
     /* Todo: get the contentContainer class to be only like 80% of the width */
     img {

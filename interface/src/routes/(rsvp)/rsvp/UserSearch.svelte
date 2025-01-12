@@ -68,7 +68,7 @@
         <h2>Edward & Marina's Wedding</h2>
         <div class="rsvpHeader">If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.</div>
         <div class="inputWrapper" style="min-width:100%">
-            <input class="aggaInput" type="text" bind:value={name} required/>
+            <input class="searchBar" type="text" bind:value={name} required/>
             <label>Full Name</label>
         </div>
         <button class="searchButton" type="submit" onclick={handleSubmit}>Find Your Invitation</button>
@@ -119,7 +119,7 @@
     .noteField {
         font-family: "Times New Roman", serif;
         letter-spacing: 1px;
-        font-size: 19px;
+        font-size: clamp(14px, calc(0.875rem + ((1vw - 4px) * 0.3765)), 19px);
         font-weight: 400;
         background-color: rgb(246, 233, 213) !important;
         border-color: rgb(64, 64, 65) !important;
@@ -129,17 +129,53 @@
         transition-property: border-color;
         margin: 0;
         height: 140px;
-        width: 440px;
+        max-width: 440px;
+        width: 80vw;
         text-align: left;
         z-index: 2;
     }
-
 
     .buttonGroup {
         margin-top: 5rem;
         display: flex;
         justify-content: center;
         gap: 2rem;
+    }
+
+    .searchBar {
+        appearance: none;
+        background-color: rgb(255, 255, 255);
+        border-color: black;
+        border-radius: 2px;
+        border-style: solid;
+        border-width: 1px;
+        border-image-repeat: stretch;
+        box-shadow: none;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.4);
+        cursor: text;
+        display: block;
+        font-weight: 400;
+        font-size: 1rem;
+        height: 3rem;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        padding-block-start: 15px;
+        padding-inline-end: 10px;
+        padding-inline-start: 10px;
+        padding: 15px .625rem 0;
+        position: relative;
+        text-align: start;
+        text-indent: 0px;
+        text-rendering: auto;
+        text-size-adjust: 100%;
+        touch-action: manipulation;
+        transition-delay: 0s;
+        transition-duration: 0.2s;
+        transition-property: border-color;
+        transition-timing-function: ease-out;
+        width: 100%;
+        word-spacing: 0px;
     }
 
     .searchButton {

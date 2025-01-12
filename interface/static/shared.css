@@ -6,8 +6,6 @@ body {
     margin: 0;
 }
 
-
-
 .headerImage {
     width: 100%;
     display: -webkit-box;
@@ -27,6 +25,7 @@ body {
     display: block;
     max-width: 100%;
     max-height: 120px;
+    height: auto;
     margin-bottom: 20px;
     width: 100%;
 }
@@ -37,7 +36,7 @@ body {
     width: 100%;
     max-width: 100%;
     max-height: 100vh;
-    height: 100%;
+    height: auto;
     z-index: -1;
 }
 
@@ -50,90 +49,12 @@ h1 {
     margin: auto;
 }
 
-.weddingNav {
-    align-content: center;
-    align-items: center;
-    padding-inline-start: 0px;
-    text-align: center;
-    display: flex;
-    margin: 10px auto;
-    border-radius: 8px;
-    width: 70%;
-    justify-content: center;
-}
-
-.weddingNav li {
-    list-style: none;
-    display: inline-block;
-    margin: 50px auto;
-}
-
-.weddingNav li a {
-    color: rgb(64, 64, 65);
-    text-decoration: none;
-    position: relative;
-    padding: 4px 4px;
-    font-size: 18px;
-    display: block;
-}
-
-.weddingNav li a + a {
-    margin-left: 16px;
-}
-
-.weddingNav li a:after {
-    content: '';
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 3px;
-    background-color: rgb(64, 64, 65);
-    transform-origin: bottom right;
-    transition: transform 0.24s ease;
-    transform: scaleX(0);
-}
-
-.weddingNav li a:hover:after {
-    transform-origin: bottom left;
-    transform: scaleX(1);
-}
-
-
-.bookButton {
-    width: 115px;
-    height: 25px;
-    background: #4E9CAF;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 25px;
-}
-
-.test {
-    width: 342px;
-    height: 512px;
-    text-align: center;
-    justify-content: center;
-}
-
 .smallImg {
     height: 75%;
     width: 75%;
     object-fit: contain;
     text-align: center;
 }
-
-.row {
-    display: flex;
-}
-
-.column {
-    flex: 50%;
-}
-
 
 
 .contentContainer {
@@ -160,91 +81,137 @@ h1 {
     }
 }
 
+
+/* === Navbar CSS Classes === */
+.weddingNav {
+    align-content: center;
+    align-items: center;
+    padding-inline-start: 0px;
+    text-align: center;
+    display: flex;
+    margin: 1vh auto;
+    border-radius: 8px;
+    width: 90%;
+    justify-content: center;
+}
+
+.weddingNav li {
+    list-style: none;
+    display: inline-block;
+    margin: 5% auto;
+}
+
+.weddingNav li a {
+    color: rgb(64, 64, 65);
+    text-decoration: none;
+    position: relative;
+    padding: .272vw .272vw;
+    font-size: clamp(8px, calc(0.5rem + ((1vw - 4px) * 0.9036)), 20px);
+    display: block;
+}
+
+.weddingNav li a + a {
+    margin-left: 16px;
+}
+
+.weddingNav li a:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: clamp(1px, calc(0.0625rem + ((1vw - 3.2px) * 0.142)), 3px);
+    background-color: rgb(64, 64, 65);
+    transform-origin: bottom right;
+    transition: transform 0.24s ease;
+    transform: scaleX(0);
+}
+
+.weddingNav li a:hover:after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+
+.bookButton {
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+
+/* === RSVP Page + Forms CSS Classes */
 .rsvpForm {
     height: 80%;
     min-height: 350px;
-    width: 480px;
+    width: 80vw;
+    max-width: 480px;
     padding: 5px 20px 0px;
     text-align: left;
     z-index: 2;
     margin: auto;
     display: grid;
-    justify-items: center !important;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .rsvpForm h2 {
     color: rgba(0, 0, 0, 0.4);
-    font-size: 32px;
+    font-size: clamp(20px, calc(1.75rem + ((1vw - 4px) * 0.9036)), 32px);
     font-weight: 400;
     text-transform: none;
     letter-spacing: 1px;
-    padding-top: 260px;
+    padding-top: 30vh;
     padding-bottom: 15px;
     text-align: center;
 }
 
 .rsvpHeader {
-    font-size: 19px;
+    font-size: clamp(19px, calc(1.1875rem + ((1vw - 4px) * -0.3012)), 15px);;
     font-weight: 400;
     display: flex;
     align-items: flex-start;
     margin-bottom: 8px;
 }
 
-.guestInput {
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);
-    font-size: 19px;
-    font-weight: 400;
-    text-align: center;
+.rsvpRow {
+    height: 80%;
+    width: 90vw;
+    max-width: 480px;
+    text-align: left;
+    z-index: 2;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 24px;
 }
 
-.aggaInput {
-    appearance: none;
-    background-color: rgb(255, 255, 255);
-    border-color: black;
-    border-radius: 2px;
-    border-style: solid;
-    border-width: 1px;
-    border-image-repeat: stretch;
-    box-shadow: none;
-    box-sizing: border-box;
+.rsvpRow .nameLabel {
     color: rgba(0, 0, 0, 0.4);
-    cursor: text;
-    display: block;
     font-weight: 400;
-    font-size: 1rem;
-    height: 3rem;
-    /*transition-property: border-color;*/
-    letter-spacing: 1px;
-    line-height: 1.5;
-    padding-block-start: 15px;
-    padding-inline-end: 10px;
-    padding-inline-start: 10px;
-    padding: 15px .625rem 0;
-    /*padding-left: 10px;*/
-    /*padding-right: 10px;*/
-    /*padding-top: 0px;*/
-    position: relative;
-    text-align: start;
-    text-indent: 0px;
-    text-rendering: auto;
-    text-size-adjust: 100%;
-    touch-action: manipulation;
-    transition-delay: 0s;
-    transition-duration: 0.2s;
-    transition-property: border-color;
-    transition-timing-function: ease-out;
-    width: 100%;
-    word-spacing: 0px;
+    display: flex;
+    font-size: clamp(14px, calc(0.875rem + ((1vw - 4px) * 0.4518)), 20px);;
+    margin-bottom: 0px;
+}
+
+.rsvpRow .inputFlex {
+    display: flex;
+    width: 20rem;
+    margin-bottom: 0px
 }
 
 
 
-/* Wrapper for animating fancy Labels on Inputs*/
+/* Wrapper for animating fancy Labels on Text Input */
 
 .inputWrapper {
     position: relative;
@@ -278,100 +245,3 @@ input[type="text"]:valid ~ label{
     line-height: 1.34;
     transition-property: font-size, padding;
 }
-
-
-.guestName{
-    appearance: none;
-    background-color: rgb(255, 255, 255);
-    border-color: black;
-    border-radius: 2px;
-    border-style: solid;
-    border-width: 1px;
-    border-image-repeat: stretch;
-    box-shadow: none;
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.4);
-    cursor: text;
-    display: block;
-    font-weight: 400;
-    height: 42px;
-    letter-spacing: 1px;
-    line-height: 24px;
-    padding-block-start: 15px;
-    padding-inline-end: 10px;
-    padding-inline-start: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 0px;
-    position: relative;
-    text-align: start;
-    text-indent: 0px;
-    text-rendering: auto;
-    text-size-adjust: 100%;
-    touch-action: manipulation;
-    transition-delay: 0s;
-    transition-duration: 0.2s;
-    transition-property: border-color;
-    transition-timing-function: ease-out;
-    width: 110px;
-    word-spacing: 0px;
-}
-
-
-
-
-.findInvitation {
-    line-height: 2.75rem;
-    max-width: 75%;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    cursor: pointer;
-    padding-bottom: 0px;
-    padding-top: 0.125rem;
-    text-align: center;
-    letter-spacing: 2px;
-    color: rgb(17, 71, 57);
-    font-size: 19px;
-    font-style: normal;
-    position: relative;
-    margin-top: 20px;
-    background-color: rgb(128, 171, 127);
-    text-transform: uppercase;
-    display: block !important;
-    width: 100% !important;
-    font-weight: 700 !important;
-    border-radius: 2px;
-    transition: background-color 0.1s ease-out, color, border-color;
-    border-width: 1px;
-    border-style: solid;
-    border-image: initial;
-    border-color: rgba(0, 0, 0, 0.4);
-}
-
-/*.nextButton {*/
-/*    line-height: 2.75rem;*/
-/*    max-width: 200px;*/
-/*    padding-left: 1.25rem;*/
-/*    padding-right: 1.25rem;*/
-/*    cursor: pointer;*/
-/*    padding-bottom: 0px;*/
-/*    padding-top: 0.125rem;*/
-/*    text-align: center;*/
-/*    letter-spacing: 2px;*/
-/*    color: rgba(0, 0, 0, 0.4);*/
-/*    font-size: 19px;*/
-/*    font-style: normal;*/
-/*    position: relative;*/
-/*    margin-top: 20px;*/
-/*    background-color: rgb(128, 171, 127);*/
-/*    text-transform: uppercase;*/
-/*    display: block !important;*/
-/*    width: 50% !important;*/
-/*    font-weight: 700 !important;*/
-/*    border-radius: 2px;*/
-/*    transition: background-color 0.1s ease-out, color, border-color;*/
-/*    border-width: 1px;*/
-/*    border-style: solid;*/
-/*    border-image: initial;*/
-/*    border-color: rgba(0, 0, 0, 0.4);*/
-/*}*/
