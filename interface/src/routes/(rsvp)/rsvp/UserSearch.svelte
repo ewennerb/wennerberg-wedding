@@ -65,7 +65,7 @@
 
 <div class="rsvpForm">
     {#if currentStage === 1}
-        <h2>Edward & Marina's Wedding</h2>
+        <h2>Marina & Edward</h2>
         <div class="rsvpHeader">If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.</div>
         <div class="inputWrapper" style="min-width:100%">
             <input class="searchBar" type="text" bind:value={name} required/>

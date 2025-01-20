@@ -20,7 +20,7 @@
     </div>
     <div class="mainContainer">
         <div class="homeHeader">
-            <h1>Edward & Marina</h1>
+            <h1>Marina & Edward</h1>
             <h2 class="">May 31st • Cleveland, OH</h2>
             <h2>{diffDays} Days Until Wedding!</h2>
         </div>

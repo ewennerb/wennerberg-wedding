@@ -80,10 +80,10 @@
 
 
     .lower img {
-        width: 100%;
-        max-width: 50%;
-        max-height: 100vh;
-        height: 50%;
+        width: 35vw;
+        /*max-width: 50%;*/
+        /*max-height: 100vh;*/
+        height: auto;
     }
 
     footer h1 {

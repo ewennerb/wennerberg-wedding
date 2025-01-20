@@ -1,5 +1,6 @@
+<!--Todo: Get this all centered into a better div -->
 <div class="contentContainer">
-    <div style="display:inline-block; max-width:600px; text-align:left">
+    <div style="display:inline-block; max-width:500px; text-align:left; width:75vw">
 
         <h3>Q: What's with the Latin?</h3>
         <p>A: It goes hard - next question please.</p>
@@ -34,3 +35,16 @@
     </div>
 
 </div>
+
+<style>
+    h3 {
+        font-family: "Times New Roman", serif;
+        font-size: clamp(8px, calc(0.998rem + ((1vw - 4px) * 0.3012)), 20px);
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+        font-family: "Times New Roman", serif;
+        font-size: clamp(8px, calc(0.875rem + ((1vw - 4px) * 0.3012)), 16px);
+    }
+</style>
