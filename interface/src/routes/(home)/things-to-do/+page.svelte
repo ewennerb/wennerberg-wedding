@@ -107,16 +107,15 @@
 
 <style>
 
-    .activityList {
-        padding: 2vh;
-    }
-
     h1 {
+        padding-top: 10%;
+        padding-bottom: 1rem;
         color: rgba(0, 0, 0, 0.4);
-        font-size: clamp(20px, calc(1.25rem + ((1vw - 4px) * 0.9036)), 32px);
+        font-size: clamp(20px, calc(1.25rem + ((1vw - 4px) * 1.3554)), 38px);
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: .42vw;
+        border-bottom: 1px solid #404041;
     }
 
     p {

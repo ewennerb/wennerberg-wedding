@@ -22,7 +22,7 @@
                 currentStage++;
                 formStage.set(2); // Move to the next stage
             } else {
-                error = 'User not found. Please try again.';
+                error = 'Guest not found. Please try again.';
             }
         } catch (err) {
             error = 'An error occurred. Please try again.';

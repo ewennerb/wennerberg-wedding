@@ -31,13 +31,13 @@
             name: "Jake Carrico",
             role: "Groomsman",
             relation: "Friend of the Groom",
-            photo: "/img/groomsmen/placeholder.jpg"
+            photo: "/img/groomsmen/jake.jpg"
         },
         {
             name: "James Lawless",
             role: "Groomsman",
             relation: "Friend of the Groom",
-            photo: "/img/groomsmen/placeholder.jpg"
+            photo: "/img/groomsmen/james.jpg"
         }
     ];
 
@@ -84,7 +84,7 @@
         name: "Rodrigo Corrigan",
         role: "Best Man",
         relation: "Friend of the Groom",
-        photo: "/img/groomsmen/placeholder.jpg"
+        photo: "/img/groomsmen/rodrigo.jpg"
     };
 
     const maidOfHonor = {

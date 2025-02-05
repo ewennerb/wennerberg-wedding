@@ -13,13 +13,6 @@
 </div>
 
 <style>
-    h1 {
-        color: rgba(0, 0, 0, 0.4);
-        font-size: clamp(20px, calc(1.25rem + ((1vw - 4px) * 0.9036)), 32px);
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: .42vw;
-    }
 
     h2 {
         color: rgba(0, 0, 0, 0.4);
