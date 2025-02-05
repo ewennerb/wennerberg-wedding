@@ -1,3 +1,7 @@
+<script>
+    import Footer from "./Footer.svelte";
+</script>
+
 <div class="contentContainer">
     <img src="/img/main.jpg" alt="" style="justify-content: center"/>
 
@@ -28,16 +32,14 @@
         <img class="smallImg" src="/img/walk-away.jpg" alt=""/>
     </div>
 
-    <footer>
-        <h1>E&M</h1>
-    </footer>
+    <Footer/>
 
 
 </div>
 
 <style>
     .eventBlock {
-        margin-bottom: 5rem;
+        margin-bottom: 5vh;
     }
 
     .eventHeader {
@@ -78,28 +80,13 @@
         justify-items: center;
     }
 
-
     .lower img {
         width: 35vw;
-        /*max-width: 50%;*/
-        /*max-height: 100vh;*/
         height: auto;
-    }
-
-    footer h1 {
-        color: rgba(0, 0, 0, 0.4);
-        font-size: 56px;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 6px;
-        padding-top: 220px;
-        padding-bottom: 15px;
     }
 
     /* Todo: get the contentContainer class to be only like 80% of the width */
     img {
-        /*position: absolute;*/
-        /*pointer-events: none;*/
         width: 100%;
         max-width: 70%;
         max-height: 100vh;

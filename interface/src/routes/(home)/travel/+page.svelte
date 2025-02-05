@@ -1,3 +1,7 @@
+<script>
+    import Footer from "../Footer.svelte";
+</script>
+
 <div class="contentContainer">
 
     <h1>Where To Stay</h1>
@@ -7,14 +11,18 @@
         (216) 357-3250
     </h3>
 
-    <div style="display:grid; justify-content: center; max-width: 70vw; margin: auto; padding-bottom: 10vh">
+    <div style="display:grid; justify-content: center; max-width: 70vw; margin: auto; padding-bottom: 5vh">
         <img src="/img/hotel.png" alt="https://media-api.xogrp.com/images/ac80ba43-0a91-406c-b3b5-2b866ff529c8"/>
         <p style="max-width:500px; text-align:left">
             We've reserved a block of rooms at the Kimpton Schofield Hotel at the heart of downtown Cleveland. The hotel is very close to many popular bars and restaurants. We have options for both one night and two nights available in our block. Use the button below to book using our block discount!
         </p>
     </div>
 
-    <a target="_blank" rel="noopener noreferrer" class="bookButton" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Book Now!</a>
+    <div style="margin-bottom: 5vh">
+        <a target="_blank" rel="noopener noreferrer" class="bookButton" href="https://www.ihg.com/kimptonhotels/hotels/us/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=CLESH&qCiD=30&qCiMy=042025&qCoD=01&qCoMy=052025&qGrpCd=M44&qAAR=6CBARC&qRtP=6CBARC&setPMCookies=true&qSHBrC=KI&qDest=2000%20East%20Ninth%20Street,%20Cleveland,%20OH,%20US&srb_u=1&qRmFltr=">Book Now!</a>
+    </div>
+
+    <Footer/>
 
 </div>
 

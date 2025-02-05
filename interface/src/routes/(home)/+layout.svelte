@@ -47,7 +47,7 @@
                 <a href='things-to-do' data-item='Things To Do'>Things To Do</a>
             </li>
             <li>
-                <a target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' data-item='Registry'>Registry</a>
+                <a target="_blank" rel="noopener noreferrer" href='https://www.myregistry.com/wedding-registry/marina-bostelman-and-edward-wennerberg-cleveland-oh/4651928' data-item='Registry'>Registry</a>
             </li>
         </ul>
     </div>
