@@ -1,6 +1,5 @@
 <script>
 
-    export const prerender = true;
     let { children } = $props();
 
     const today = new Date();

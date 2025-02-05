@@ -7,9 +7,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-#    volumes:
-#      - ./sveltekit-app:/app # For local development (optional)
-#      - interface/node_modules # Prevent conflicts with host dependencies
     environment:
       - NODE_ENV=production
 
@@ -21,6 +18,7 @@ services:
       - '8080:8080'
     depends_on:
       - 'mongo'
+
   mongo:
     image: 'mongo:latest'
     environment:

@@ -1,5 +1,4 @@
-FROM node:18-alpine AS builder
-
+FROM --platform=linux/amd64 node:18-alpine AS builder
 WORKDIR /app
 COPY . .
 COPY package*.json ./
@@ -9,7 +8,7 @@ RUN npm ci
 RUN npm run build
 
 # Stage 2: Serve the SvelteKit app
-FROM node:18-alpine AS runner
+FROM --platform=linux/amd64 node:18-alpine AS runner
 
 #WORKDIR /app
 COPY --from=builder /app/build ./build
