@@ -3,7 +3,8 @@ export async function POST({ request }) {
     const encodedName = encodeURIComponent(name);
 
     try {
-        const response = await fetch(`http://api:8080/household/${encodedName}`, {
+        const response = await fetch(`https://wennerberg-wedding.com/api/household/${encodedName}`, {
+        // const response = await fetch(`https://api:8080/household/${encodedName}`, {
             method: 'GET',
         });
 

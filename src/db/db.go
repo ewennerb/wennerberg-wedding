@@ -8,7 +8,7 @@ import (
 )
 
 func ConnectDB() *mongo.Client {
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://wennerberg-wedding-mongo-1:27017"))
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb://mongo:27017"))
 
 	if err != nil {
 		//Todo: look into format strings to send the error too

@@ -7,7 +7,7 @@ export async function POST({ request }) {
 
 
     try {
-        const response = await fetch(`http://api:8080/household/${household.id}`, {
+        const response = await fetch(`https://wennerberg-wedding.com/api/household/${household.id}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(household),
