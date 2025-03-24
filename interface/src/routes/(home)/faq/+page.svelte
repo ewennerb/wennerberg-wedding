@@ -31,11 +31,11 @@
         <h3>Q: What should we do between the ceremony and reception?</h3>
         <p>A: Whatever you want! We recommend you check out the "Things To Do" tab for some of our favorite spots around the city!</p>
 
-        <h3>Q: What is the dress code?</h3>
-        <p>A: Formal attire is required for the ceremony and reception.</p>
-
         <h3>Q: Can I bring a plus one?</h3>
         <p>A: Please refer to the RSVP tab to determine if you've been allowed a plus one. If you feel like we missed someone, please reach out.</p>
+
+        <h3>Q: I'm having trouble with the website. What should I do?</h3>
+        <p>A: Please send an email to <b>edwardwennerberg@gmail.com</b> detailing your issue.</p>
     </div>
 
     <Footer/>
